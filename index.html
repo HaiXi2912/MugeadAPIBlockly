@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mugeda Blockly编辑器</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<script defer src="bundle.js"></script></head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Mugeda API 可视化编辑器</h1>
+      <div class="buttons">
+        <button id="saveButton" class="btn primary">保存项目</button>
+        <button id="loadButton" class="btn">加载项目</button>
+        <button id="runButton" class="btn success">生成代码</button>
+      </div>
+    </div>
+    <div class="main">
+      <div id="blocklyDiv"></div>
+      <div class="output-container">
+        <h3>生成的JavaScript代码</h3>
+        <pre id="codeOutput" class="code-output"></pre>
+        <div class="element-helper">
+          <h4>Mugeda元素说明</h4>
+          <p>Mugeda中的元素通常命名为<code>元素#1</code>、<code>元素#2</code>等格式。</p>
+          <p>您可以使用以下块来操作这些元素：</p>
+          <ul>
+            <li><strong>获取元素</strong> - 直接指定元素名称</li>
+            <li><strong>获取所有前缀的元素</strong> - 获取所有"元素#"格式的元素</li>
+            <li><strong>遍历元素数组</strong> - 对获取的多个元素进行操作</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html> 
